@@ -12,7 +12,8 @@ ENV PATH /opt/domclust/bin/:$PATH
 RUN wget http://mbgd.genome.ad.jp/domrefine/domrefine1.1.1.tgz && \
     tar zxvf domrefine1.1.1.tgz && rm domrefine1.1.1.tgz && \
     cd /opt/domrefine1.1.1/lib && \
-    wget http://www.clustal.org/omega/clustalo-1.2.4-Ubuntu-x86_64 && mv clustalo-1.2.4-Ubuntu-x86_64 clustalo && chmod +x clustalo
+    wget http://www.clustal.org/omega/clustalo-1.2.4-Ubuntu-x86_64 && mv clustalo-1.2.4-Ubuntu-x86_64 clustalo && chmod +x clustalo && \
+    wget http://www.microbesonline.org/fasttree/FastTree && chmod +x FastTree
 ENV PATH /opt/domrefine1.1.1/:/opt/domrefine1.1.1/bin/:/opt/domrefine1.1.1/bin_dev/:/opt/domrefine1.1.1/lib/:$PATH
 
 WORKDIR /work
